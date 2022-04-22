@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Drugi assigment-Animacija</title>
+</head>
+<style>
+      body { 
+          
+        margin: 0%;
+        padding: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #050210;
+        height: 100vh;
+
+            }
+
+            .circle{
+                    margin-top: 50px;
+                    margin-left: 50px;
+                    position: relative;
+                    width: 500px;
+                    height: 500px;
+                    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+                    border-radius:  50%; 
+                    animation: animate 1s linear infinite  ;
+                    
+            }
+
+            @keyframes animate {
+                from {
+                    transform: rotate(0deg);
+                }
+                to { transform: rotate(360deg);
+
+                }
+            }
+            .load{
+                   width:430px ;
+                   height: 430px;
+                
+                   border-radius: 50%;
+                   margin-top: 50px;
+                   margin-left: 50px;
+                   position: absolute;
+                   background-color:rgba(0, 0, 0, 1);
+                   
+               
+                       
+                
+            }
+            .ring{
+                    position:absolute;
+                    background-color:rgba(32, 46, 58, 1);
+                    width:100% ;
+                    height: 100%;
+                    border-radius: 50%;
+                    opacity:0.8;
+                 
+                    animation: anim2 1.5s  linear infinite ;
+  
+            }
+
+            .ring:after{
+                    content: '';
+                    background-color: rgba(32, 46, 58, 1);
+                    border-radius: 50%;
+                    position: absolute;
+
+            }
+ 
+            
+            @keyframes anim2{
+             
+                   0%{
+                            transform: scale(0);
+                            
+                            opacity: 5; 
+                           
+
+                    }
+     
+                    }
+
+        
+
+            .circle span {
+
+                 
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+                    border-radius: 50%; 
+                    
+                        }
+
+                              
+        
+            .circle span:nth-child(1){    
+                    filter: blur(6px);
+
+            }
+            .circle span:nth-child(2){    
+                    filter: blur(11px);
+
+            }
+            .circle span:nth-child(3){    
+                    filter: blur(25px);
+
+            }
+            .circle span:nth-child(4){    
+                    filter: blur(60px);
+
+            }
+
+
+
+</style>
+<body>
+  <div class="circle" >
+         
+         
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     
+ </div>
+ <div class="load">
+        <div class="ring">
+            
+        </div>
+       
+ </div>
+</body>
+</html>
